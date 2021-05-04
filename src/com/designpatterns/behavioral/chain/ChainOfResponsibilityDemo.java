@@ -15,6 +15,16 @@ public class ChainOfResponsibilityDemo {
         * - each handler implements an interface
         * - the request passes from sender to all receivers in chain
         *
+        * pitfalls
+        * - no guarantees for sink
+        * - too many handlers might make it slow
+        *
+        * observations
+        *
+        * - see how all objects are implementing same interface Handler
+        * - and overriding abstract class handle()
+        * - share the same setSuccessor via the interface
+        *
         * */
 
         CompanyDirector director = new CompanyDirector();
