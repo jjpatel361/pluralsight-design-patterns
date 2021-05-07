@@ -18,15 +18,10 @@ public class ReportGeneratorFacade {
 
         //Write report
         ReportWriter writer = new ReportWriter();
-        switch(type)
-        {
-            case HTML:
-                writer.writeHtmlReport(report, location);
-                break;
-
-            case PDF:
-                writer.writePdfReport(report, location);
-                break;
+        switch (type) {
+            case HTML -> writer.writeHtmlReport(report, location);
+            case PDF -> writer.writePdfReport(report, location);
+            default -> throw new IllegalStateException("Unexpected value: " + type);
         }
 
     }

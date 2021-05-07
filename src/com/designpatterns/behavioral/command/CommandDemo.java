@@ -32,8 +32,6 @@ public class CommandDemo {
          * Pitfalls
          * - dependence on other patterns
          * - we need prototype to create copies of command ?
-         * -
-         *
          *
          * */
 
