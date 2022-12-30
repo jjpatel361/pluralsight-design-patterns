@@ -8,7 +8,7 @@ public class FlyWeightDemo {
         * primarily used for memory efficiency.
         * say you are using an object and doing new () / creating a new instance
         * across your code path. we cna be smart about the creation and cache
-        * the old values and see if we can re use them.
+        * the old values and see if we can reuse them.
         *
         * caveats
         * - premature optimization ? maybe

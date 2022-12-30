@@ -12,7 +12,7 @@ public class DecoratorDemo {
         * - also termed as wrapper
         * - more than just inheritance where we are overriding or doing some contract matching
         * - follows single responsibility principle
-        * - e.g java io input stream classes
+        * - e.g. java io input stream classes
         * - constructor needs the component from hierarchy
         *
         * how to identify a decorator

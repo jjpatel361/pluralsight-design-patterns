@@ -35,6 +35,18 @@ public class AbstractFactoryDemo {
         * - pattern within a pattern - factory returning another factory.
         * - usually starts with a factory and then is moved into an abstract factory
         *   don't start off with an abstract factory!! let it evolve.
+        *
+        * Example below explained
+        * To get a credit card we use 2 parameters
+        * - Credit Card type (Gold, Platinum)
+        * - Credit Score
+        *
+        * Both of these parameters are independent and can change over time. So you have
+        * CreditCardFactory - that returns another factory (AmexCardFactory, VisaCardFactory)
+        * based on credit score
+        * AmexCardFactory / VisaCardFactory in turn returns card based on CardType
+        *
+        *
         * */
         CreditCardFactory cf = CreditCardFactory.getCreditCardFactory(740);
         CreditCard goldCreditCard = cf.getCreditCard(CardType.GOLD);
