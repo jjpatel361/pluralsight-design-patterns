@@ -18,11 +18,7 @@ public class DevEcommerceShop2 {
         for (Order order : orders) {
 
             // Build Request
-            PromoServiceRequest request = new PromoServiceRequestBuilder()
-                    .withPromoCode(order.promoCode)
-                    .withAmount(order.amount)
-                    .withPromoService(promoService)
-                    .build();
+            PromoServiceRequest request = new PromoServiceRequest(order, promoService);
 
             // Execute via Circuit Breaker
             try {

@@ -30,7 +30,6 @@ public class DevEcommerceShop {
                 System.out.printf("Exception: %s orderId %s%n", e.getMessage(), order.id);
             }
         });
-
     }
 
     public static List<Order> getOrderStream(int orderStreamSize) {

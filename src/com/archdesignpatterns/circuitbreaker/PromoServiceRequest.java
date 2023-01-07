@@ -13,6 +13,11 @@ public class PromoServiceRequest {
         this.amount = requestBuilder.getAmount();
     }
 
+    public PromoServiceRequest(Order order, PromoService service) {
+        this.service = service;
+        this.promoCode = order.promoCode;
+        this.amount = order.amount;
+    }
     public double execute() throws Exception {
         double afterDiscount = this.service.apply(this.promoCode, this.amount);
         return afterDiscount;
